@@ -1,25 +1,22 @@
 import React from "react";
-import { AiFillStar } from "react-icons/ai";
 import { BsFillBagHeartFill } from "react-icons/bs";
 
-const Card = () => {
+const Card = ({ img, title, star, reviews, prevPrice, newPrice }) => {
   return (
     <section className=" p-5 cursor-pointer rounded-lg border-[2px] border-[#ededed]">
-      <img
-        src="https://m.media-amazon.com/images/I/6125yAfsJKL._AC_UX575_.jpg"
-        alt="Shoe"
-        className="w-48 mb-4"
-      />
+      <img src={img} alt="Shoe" className="w-52 mb-4" />
       <div>
-        <h3 className="mb-2">Title</h3>
+        <h3 className="mb-2">{title}</h3>
         <section className="flex mb-2 items-center">
-          <AiFillStar color="#d5ab55" /> <AiFillStar color="#d5ab55" />{" "}
-          <AiFillStar color="#d5ab55" /> <AiFillStar color="#d5ab55" />
-          <span className="text-sm ml-3">5</span>
+          {star}
+          {star}
+          {star}
+          {star}
+          <span className="text-sm ml-3">{reviews}</span>
         </section>
         <section className="flex justify-between items-center">
           <div>
-            <del>$300</del> 200
+            <del>${prevPrice}</del> {newPrice}
           </div>
           <div>
             <BsFillBagHeartFill color="#d5ab55" />

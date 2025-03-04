@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Button = () => {
+const Button = ({onClick, value, title}) => {
   return (
-    <div>Button</div>
+    <button onClick={onClick} value={value} className='py-2 bg-transparent cursor-pointer rounded-md text-zinc-500 border border-zinc-300 px-5'>
+      {title}
+    </button>
   )
 }
 
